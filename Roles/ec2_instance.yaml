@@ -3,11 +3,11 @@
   connection: local
   vars:
     ami_id: ami-0220d79f3f480ecf5
-    sg_id: sg-069e93726a56f3f15
+    sg_id: sg-0f0923552cc5453f2
     zone_id: "Z01236531AIID4R7SAT1Q"
     domain_name: "mitha.fun" 
     instances:
-    - cart
+    - Mongodg
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
