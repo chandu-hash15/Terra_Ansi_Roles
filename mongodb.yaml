@@ -2,5 +2,5 @@
   hosts: mongodg
   become: true
 
-  roles:
+  Roles:
     - Mongodb
