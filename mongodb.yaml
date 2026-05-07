@@ -2,4 +2,4 @@
   hosts: mongodg
   become: true
   roles :
-    Mongodb
+  - Mongodb
