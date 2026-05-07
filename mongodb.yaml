@@ -1,5 +1,6 @@
 - name: setting up mongodb
   hosts: mongodg
   become: true
-  roles :
-  - Mongodb
+
+  roles:
+    - Mongodb
