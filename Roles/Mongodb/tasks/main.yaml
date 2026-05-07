@@ -1,5 +1,5 @@
 - name : settingup mongodb
-  hosts : mongodb
+  hosts : mongodg
   become : yes
   tasks : 
   - name : copying the mongo.repo file
