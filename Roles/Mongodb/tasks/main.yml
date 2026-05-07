@@ -9,11 +9,11 @@
       name: mongodb-org
       state: present
 
-  - name : updating listening address
+  - name: updating listening address
     ansible.builtin.replace:
       path: /etc/mongod.conf
-      regexp: 127.0.0.1
-      replace: 0.0.0.0
+      regexp: '127.0.0.1'
+      replace: '0.0.0.0'
 
   - name : start and enable MongoDB service
     ansible.builtin.service:
