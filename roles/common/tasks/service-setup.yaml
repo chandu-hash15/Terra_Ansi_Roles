@@ -5,6 +5,10 @@
 
   notify: daemon reload
 
+- name: unmask {{ component }} service
+  ansible.builtin.command:
+    cmd: systemctl unmask {{ component }}
+
 - name: start the service
   ansible.builtin.service:
      name: "{{component}}"
