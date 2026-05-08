@@ -1,8 +1,7 @@
-- name : copying {{component}} service
+- name: copying {{ component }} service
   ansible.builtin.template:
-    src : "{{component}}.service.j2"
-    dest : "/etc/systemd/system/{{component}}.service"
-
+    src: "{{ component }}.service.j2"
+    dest: "/etc/systemd/system/{{ component }}.service"
   notify: daemon reload
 
 - name: daemon reload immediately
@@ -13,8 +12,12 @@
   ansible.builtin.command:
     cmd: systemctl unmask {{ component }}
 
+- name: print component
+  ansible.builtin.debug:
+    msg: "{{ component }}"
+
 - name: start the service
   ansible.builtin.service:
-     name: "{{component}}"
-     state: restarted
-     enabled: yes
+    name: "{{ component }}"
+    state: restarted
+    enabled: yes
