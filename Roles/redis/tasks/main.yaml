@@ -1,5 +1,4 @@
-- name : setting up redis server
-  tasks :
+
   - name : disabling default redis
     ansible.builtin.command :  dnf module disable redis -y
 
