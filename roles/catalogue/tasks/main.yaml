@@ -1,0 +1,36 @@
+- name : creating user-app setup
+  ansible.builtin.import:
+    name : common
+    tasks_from : user-appsetup.yaml
+
+- name : installing nodejs
+  ansible.builtin.import:
+    name: common
+    tasks_from : nodejs.yaml
+
+
+- name : setting us service file
+  ansible.builtin.import:
+    name: common
+    tasks_from : service-setup.yaml
+
+- name: copying mongo.repo 
+  ansible.builtin.copy:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo 
+
+- name : installing the mongo client mongosh
+  ansible.builtin.package:
+    name: mongodb-mongosh
+    state: present
+
+- name: connect to monodb client
+  ansible.builtin.command: mongosh {{MONGODB_HOST}} --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
+  register: catalogue_output
+
+- name: conneting to mongodb
+  ansible.builtin.shell : mongosh --host {{MONGODB_HOST}}   </app/db/master-data.js
+  when: catalogue_output.stdout | int < 0
+
+  
+  
