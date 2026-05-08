@@ -5,6 +5,10 @@
 
   notify: daemon reload
 
+- name: daemon reload immediately
+  ansible.builtin.systemd_service:
+    daemon_reload: true
+
 - name: unmask {{ component }} service
   ansible.builtin.command:
     cmd: systemctl unmask {{ component }}
