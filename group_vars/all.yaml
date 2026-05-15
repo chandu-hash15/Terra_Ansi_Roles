@@ -5,3 +5,4 @@ CATALOGUE_HOST : catalogue.mitha.fun
 CART_HOST : cart.mitha.fun
 USER_HOST : user.mitha.fun
 RABBITMQ_HOST : rabbitmq.mitha.fun
+SHIPPING_HOST: shippinh.mitha.fun
