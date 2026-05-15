@@ -12,4 +12,4 @@
 - name : starting and reloading the service file
   ansible.builtin.import_role:
     name: common
-    taks_from: service-setup.yaml
+    tasks_from: service-setup.yaml
