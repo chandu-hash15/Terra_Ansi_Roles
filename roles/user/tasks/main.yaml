@@ -1,0 +1,15 @@
+- name: installing nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs.yaml
+
+
+- name: creating user and appsetup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: user-appsetup.yaml
+
+- name : starting and reloading the service file
+  ansible.builtin.import_role:
+    name: common
+    taks_from: service-setup.yaml

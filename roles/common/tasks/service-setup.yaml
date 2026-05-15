@@ -4,17 +4,17 @@
     dest: "/etc/systemd/system/{{ component }}.service"
   notify: daemon reload
 
-- name: daemon reload immediately
-  ansible.builtin.systemd_service:
-    daemon_reload: true
+- #name: daemon reload immediately
+  #ansible.builtin.systemd_service:
+  #  daemon_reload: true
 
-- name: unmask {{ component }} service
-  ansible.builtin.command:
-    cmd: systemctl unmask {{ component }}
+- #name: unmask {{ component }} service
+  #ansible.builtin.command:
+  #  cmd: systemctl unmask {{ component }}
 
-- name: print component
-  ansible.builtin.debug:
-    msg: "{{ component }}"
+- #name: print component
+  #ansible.builtin.debug:
+   # msg: "{{ component }}"
 
 - name: start the service
   ansible.builtin.systemd_service:
