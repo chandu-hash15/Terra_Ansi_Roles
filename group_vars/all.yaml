@@ -3,3 +3,5 @@ REDIS_HOST: redis.mitha.fun
 MYSQL_HOST: mysql.mitha.fun
 CATALOGUE_HOST : catalogue.mitha.fun
 CART_HOST : cart.mitha.fun
+USER_HOST : user.mitha.fun
+RABBITMQ_HOST : rabbitmq.mitha.fun
