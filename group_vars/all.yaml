@@ -3,3 +3,4 @@ REDIS_HOST: redis.mitha.fun
 MYSQL_HOST: mysql.mitha.fun
 CATALOGUE_HOST : catalogue.mitha.fun
 CART_HOST : cart.mitha.fun
+MY_SQL : mysql.mitha.fun
