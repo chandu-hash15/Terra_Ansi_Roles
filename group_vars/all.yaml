@@ -1,0 +1,4 @@
+MONGODB_HOST: mongodb.mitha.fun
+REDIS_HOST: redis.mitha.fun
+MYSQL_HOST: mysql.mitha.fun
+CATALOGUE_HOST : catalogue.mitha.fun
