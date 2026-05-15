@@ -12,8 +12,8 @@
   ansible.builtin.service:
     name: nignx
     state: started
-    enable: true
-    
+    enabled: true
+
 - name: remove default html directory
   ansible.builtin.file:
     state: absent
