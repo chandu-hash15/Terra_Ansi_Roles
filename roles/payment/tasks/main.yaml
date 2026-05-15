@@ -14,4 +14,4 @@
 - name: servicesetup using import role
   ansible.builtin.import_role:
         name: common
-        tasks_from: python.yaml
+        tasks_from: service-setup.yaml
